@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const findAll = async (period) => {
     try {
-        const baseUrl = 'http://localhost:3001/api/transaction';
+        const baseUrl = '/api/transaction';
 
         const parameter = period ? `?period=${period}` : '';
 
@@ -18,7 +18,7 @@ export const findAll = async (period) => {
 
 export const create = async (lancamento) => {
     try {
-        const url = 'http://localhost:3001/api/transaction';
+        const url = '/api/transaction';
 
         const response = await axios.post(url, lancamento);
 
@@ -30,7 +30,7 @@ export const create = async (lancamento) => {
 
 export const update = async (id, updateObject) => {
     try {
-        const url = 'http://localhost:3001/api/transaction/' + id;
+        const url = '/api/transaction/' + id;
 
         const response = await axios.put(url, updateObject);
 
@@ -42,7 +42,7 @@ export const update = async (id, updateObject) => {
 
 export const remove = async (id) => {
     try {
-        const url = 'http://localhost:3001/api/transaction/' + id;
+        const url = '/api/transaction/' + id;
 
         const response = await axios.delete(url);
 
